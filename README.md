@@ -3,7 +3,7 @@
 ## What is this?
 
 Well, nothing special...
-This is just the homepage i use for the community i am running [here](http://redxen.dynu.net)
+This is just the homepage i use for the community i am running [here](https://redxen.eu)
 
 ## Why do i host it on GitHub?
 
