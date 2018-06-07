@@ -1,0 +1,217 @@
+html {
+    margin: 0;
+    top: 0;
+    left: 0;
+    font-family: 'Oswald', sans-serif;
+    background: rgb(10, 10, 10);
+    min-height: 300px;
+    min-width: 710px;
+}
+.header {
+    height: 50px;
+    width: 100%;
+    min-width: 200px;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background-color: rgba(10, 10, 10, 0.4);
+    z-index: 20;
+    display: block;
+    float: left;
+    overflow: hidden;
+}
+.header img {
+    height: 40px;
+    padding: 5px;
+}
+.header a {
+    line-height: 50px;
+    color: #eee;
+    text-align: right;
+    padding-right: 10px;
+    padding-left: 10px;
+    text-decoration: none;
+    float: right;
+    font-size: 20px;
+    font-family: 'Dosis', sans-serif;
+}
+.header a:hover {
+    background-color: rgba(255 ,255 ,255, 0.5);
+    color: #a11;
+}
+.content {
+    width: 100%;
+    min-height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    position: absolute;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+#banner {
+    /*Sizing*/
+    height: 400px;
+    width: 100%;
+    min-width: 710px;
+    color: #fff;
+    overflow: hidden;
+    font-size: 40px;
+    
+    /*Flexbox content*/
+    justify-content: center;
+    align-items: center; 
+    display: flex;
+
+    /*Background settings*/
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(bg.jpg);
+    background-attachment: scroll;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#banner img {
+    width: 220px;
+    filter: drop-shadow(-5px 6px 3px rgba(0,0,0,.7));
+}
+#text {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    max-width: 1700px;
+    min-width: 710px;
+    min-height: 100px;
+    background-color: rgba(70, 70, 70, 0.4);
+    color: #fff;
+    align-self: center;
+}
+
+#text h2 {
+    text-align: center;
+    width: 100%;
+    font-size: 60px;
+    line-height: 100px;
+    background-color: rgba(10, 10, 10, 0.4);
+}
+
+/*Category of descriptions*/
+.category {
+    padding: 70px 0 0 0;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+    overflow: hidden;
+    transition: ease-in 200ms;
+    filter: saturate(0%);
+    color: #fff;
+    box-shadow: 0 4px 8px -2px #000;
+}
+.category:hover {
+    color: #c22;
+    box-shadow: 0 10px 8px -2px #000;
+}
+.category:hover { filter: saturate(100%); }
+
+.category img {
+    width: 40%;
+    max-width: 900px;
+    padding: 5% 5% 5% 5%;
+}
+h2 { color: #F33;}
+
+#news {margin-bottom: 20px;}
+
+.text-field {
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    padding: 0 40px 40px 0;
+    background-color: rgba(10, 10, 10, 0.4);
+    width: 100%;
+    max-width: 1200px;
+    margin: 1 auto;
+    flex-direction: row;
+    flex: 1;
+    flex-wrap: wrap;
+    align-items: center;
+    text-align: center;
+    font-family: 'Dosis', sans-serif;
+}
+.row {
+    width: 50%;
+}
+.text-field h3 { font-size: 25px;}
+
+/*Left Side settings*/
+.left {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+}
+
+/*Right side settings*/
+.right {
+    background-color: rgba(10, 10, 10, 0.4);
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 50px 50px 50px 30px;
+    justify-content: center;
+}
+.right h3, .right-alt h3 {
+    font-size: 40px;
+    margin: 0;
+}
+.right p, .right-alt p {
+    font-style: italic;
+    font-family: 'Open Sans Condensed', sans-serif;
+}
+
+/*Alternative (reversed) config*/
+
+/*Left Side settings*/
+.left-alt {
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 200px;
+}
+
+/*Right side settings*/
+.right-alt {
+    background-color: rgba(10, 10, 10, 0.4);
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px 50px 50px;
+    justify-content: center;
+    text-align: right;
+}
+
+/*Webpage footer*/
+#footer {
+    color: #fff;
+    display: flex;
+    max-width: 1700px;
+    width: 80%;
+    height: 200px;
+    text-align: center;
+    align-items: center;
+    overflow: hidden;
+    margin: 1 auto;
+}
+#footer a {
+    color: #f22;
+    text-decoration: none;
+    padding: 0 10px 0 10px;
+    font-size: 30px;
+}
+#footer-r, #footer-r a {
+    font-size: 20px;
+    padding: 0;
+    font-style: italic;
+}
