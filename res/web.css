@@ -5,33 +5,37 @@ html {
     font-family: 'Oswald', sans-serif;
     background: rgb(10, 10, 10);
     min-height: 300px;
-    min-width: 710px;
 }
 .header {
     height: 50px;
     width: 100%;
-    min-width: 200px;
     top: 0;
     left: 0;
     position: fixed;
     background-color: rgba(10, 10, 10, 0.4);
     z-index: 20;
-    display: block;
-    float: left;
+    display: flex;
     overflow: hidden;
 }
-.header img {
+#logo-header img {
+    display: flex;
     height: 40px;
     padding: 5px;
 }
-.header a {
+#links-header {
+    display: flex;
+    height: 50px;
+    line-height: 50px;
+    flex: 1 1 0;
+    justify-content: flex-end;
+}
+#links-header a {
     line-height: 50px;
     color: #eee;
-    text-align: right;
+    text-align: center;
     padding-right: 10px;
     padding-left: 10px;
     text-decoration: none;
-    float: right;
     font-size: 20px;
     font-family: 'Dosis', sans-serif;
 }
@@ -53,10 +57,10 @@ html {
     /*Sizing*/
     height: 400px;
     width: 100%;
-    min-width: 710px;
     color: #fff;
     overflow: hidden;
     font-size: 40px;
+    transition: ease-in-out 0.2s;
     
     /*Flexbox content*/
     justify-content: center;
@@ -72,13 +76,13 @@ html {
 #banner img {
     width: 220px;
     filter: drop-shadow(-5px 6px 3px rgba(0,0,0,.7));
+    transition: ease-in-out 0.2s;
 }
 #text {
     display: flex;
     flex-wrap: wrap;
     width: 100%;
     max-width: 1700px;
-    min-width: 710px;
     min-height: 100px;
     background-color: rgba(70, 70, 70, 0.4);
     color: #fff;
@@ -91,7 +95,9 @@ html {
     font-size: 60px;
     line-height: 100px;
     background-color: rgba(10, 10, 10, 0.4);
+    transition: ease-in-out 0.2s;
 }
+  
 
 /*Category of descriptions*/
 .category {
@@ -115,6 +121,7 @@ html {
     width: 40%;
     max-width: 900px;
     padding: 5% 5% 5% 5%;
+    transition: ease-in-out 0.2s;
 }
 h2 { color: #F33;}
 
@@ -124,22 +131,25 @@ h2 { color: #F33;}
     width: 100%;
     justify-content: center;
     display: flex;
-    padding: 0 40px 40px 0;
+    padding: 20px;
     background-color: rgba(10, 10, 10, 0.4);
-    width: 100%;
     max-width: 1200px;
     margin: 1 auto;
     flex-direction: row;
     flex: 1;
+    font-size: 20px;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: flex-start;
     text-align: center;
     font-family: 'Dosis', sans-serif;
 }
 .row {
     width: 50%;
 }
-.text-field h3 { font-size: 25px;}
+.text-field h3 { 
+    font-size: 25px;
+    margin: 0;
+}
 
 /*Left Side settings*/
 .left {
@@ -149,6 +159,7 @@ h2 { color: #F33;}
     justify-content: center;
     align-items: center;
     min-width: 200px;
+    transition: ease-in-out 0.2s;
 }
 
 /*Right side settings*/
@@ -159,37 +170,15 @@ h2 { color: #F33;}
     flex-direction: column;
     padding: 50px 50px 50px 30px;
     justify-content: center;
+    transition: ease-in-out 0.2s;
 }
-.right h3, .right-alt h3 {
+.right h3 {
     font-size: 40px;
     margin: 0;
 }
-.right p, .right-alt p {
+.right p {
     font-style: italic;
     font-family: 'Open Sans Condensed', sans-serif;
-}
-
-/*Alternative (reversed) config*/
-
-/*Left Side settings*/
-.left-alt {
-    background-color: rgba(0, 0, 0, 0.5);
-    width: 30%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-width: 200px;
-}
-
-/*Right side settings*/
-.right-alt {
-    background-color: rgba(10, 10, 10, 0.4);
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-    padding: 30px 50px 50px 50px;
-    justify-content: center;
-    text-align: right;
 }
 
 /*Webpage footer*/
@@ -198,6 +187,7 @@ h2 { color: #F33;}
     display: flex;
     max-width: 1700px;
     width: 80%;
+    font-size: 20px;
     height: 200px;
     text-align: center;
     align-items: center;
@@ -214,4 +204,71 @@ h2 { color: #F33;}
     font-size: 20px;
     padding: 0;
     font-style: italic;
+}
+
+/*Adaptive content using media queries*/
+
+@media screen and (max-width: 730px) {
+    .header {
+        height: 50px;
+    }
+    #banner {
+        font-size: 20px;
+        height: 300px;
+    }
+    #text h2 {
+        font-size: 30px;
+        line-height: 50px;
+    }
+    #banner img {
+        width: 110px;
+    }
+    .category {
+        flex-wrap: wrap;
+    }
+    .category img {
+        width: 30%;
+    }
+    .left, .right {
+        width: 100%;
+    }
+    .right {
+        padding: 10px 25px 10px 25px;
+    }
+    .right h3 {
+        font-size: 30px;
+    }
+    .right p {
+        font-size: 15px;
+        margin: 0;
+    }
+    .row { 
+        width: 100%;
+        margin: 10px 0;
+    }
+    .text-field {
+        font-size: 10px;
+        padding: 10px;
+        justify-content: space-between;
+    }
+    .text-field h3 {
+        font-size: 20px;
+    }
+    #footer {
+        width: 90%;
+        font-size: 15px;
+        height: auto;
+        flex-flow: wrap;
+    }
+    #footer a {
+        font-size: 25px;
+        padding: 0 7px 0 7px;
+    }
+    #footer-r, #footer-r a {
+        font-size: 15px;
+        padding: 0;
+    }
+    #footer-r {
+        padding: 0 0 10px 0;
+    }
 }
