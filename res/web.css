@@ -18,7 +18,7 @@ html {
     transition: ease-out 0.5s;
 }
 .header:hover {
-    background-color: rgba(0, 0, 0, 0.2);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 .header-title {
     width: 100%;
@@ -43,6 +43,10 @@ html {
     line-height: 50px;
     flex: 1 1 0;
     justify-content: flex-end;
+}
+.sticky > #links-header a:hover {
+    background-color: rgba(255 ,255 ,255, 0.5);
+    color: #a11;
 }
 .sticky {
     position: fixed;
@@ -71,8 +75,8 @@ html {
     font-size: 20px;
     font-family: 'Dosis', sans-serif;
 }
-.header a:hover {
-    background-color: rgba(255 ,255 ,255, 0.5);
+#links-header a:hover {
+    background-color: rgba(255 ,255 ,255, 0);
     color: #a11;
 }
 .content {
