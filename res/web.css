@@ -10,18 +10,34 @@ html {
     height: 50px;
     width: 100%;
     left: 0;
-    background-color: rgba(30, 30, 30, 0.4);
+    background-color: rgba(0, 0, 0, 0);
     z-index: 20;
     display: flex;
+    position: absolute;
     overflow: hidden;
+    transition: ease-out 1s;
+}
+.header-title {
+    width: 100%;
+    line-height: 50px;
+    font-size: 25px;
+    color: #fff;
+    display: flex;
+    height: 50px;
+    flex-wrap: nowrap;
+}
+#logo-header {
+    display: none;
+    opacity: 0;
+}
+.sticky > #logo-header {
+    opacity: 1;
+    display: flex;
 }
 .sticky {
     position: fixed;
-    background-color: rgba(10, 10, 10, 0.4);
+    background-color: rgba(10, 10, 10, 0.7);
     top: 0;
-}
-.sticky + .content {
-    padding-top: 50px;
 }
 #logo-header img {
     display: flex;
@@ -66,7 +82,7 @@ html {
     color: #fff;
     overflow: hidden;
     font-size: 40px;
-    transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.7s;
     
     /*Flexbox content*/
     justify-content: center;
@@ -82,7 +98,7 @@ html {
 #banner img {
     width: 220px;
     filter: drop-shadow(-5px 6px 3px rgba(0,0,0,.7));
-    transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.7s;
 }
 #text {
     display: flex;
@@ -101,7 +117,7 @@ html {
     font-size: 60px;
     line-height: 100px;
     background-color: rgba(10, 10, 10, 0.4);
-    transition: ease-in-out 0.2s;
+    transition: ease-in-out 0.5s;
 }
   
 
