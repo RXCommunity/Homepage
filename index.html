@@ -1,43 +1,50 @@
 <html>
     <head>
-        <!--Styles and such-->
+        <!--Styles and meta-->
+        <title>RedXen Community</title>
         <link rel="stylesheet" href="res/web.css">
+        <meta name="author" content="caskd">
+        <meta charset="UTF-8">
+        <meta name="description" content="The homepage of the RedXen Community">
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+        </script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
         <link rel="shortcut icon" href="/favicon.ico">
-        <!--Meta and tracking-->
-        <meta name="author" content="caskd">
-        <meta charset="UTF-8">
-        <meta name="description" content="The homepage of the RedXen Community">
-        <title>RedXen Community</title>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-120536610-1"></script>
+        <!-- On DOM load -->
         <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'UA-120536610-1');
+            $(document).ready(function() {
+                $.getScript("res/header.js");
+                $.getScript("https://www.googletagmanager.com/gtag/js?id=UA-120536610-1");
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'UA-120536610-1');
+            });
         </script>
     </head>
     <body>
         <div class="interface">
-            <div class="header">
-                <span id="logo-header">
-                    <img src="res/logo.png" alt="logo">
-                </span>
-                <span id="links-header">
-                    <a href="https://forum.redxen.eu">Forum</a>
-                    <a href="https://steamcommunity.com/groups/redxengaming">Steam</a>
-                    <a href="/discord">Discord</a>
-                    <a href="https://yagpdb.redxen.eu">PMBot</a>
-                </span>
-            </div>
             <div class="content">
                <div id="banner">
                     <img id="logobig" src="res/logo.png" alt="logo">
                     <h1>RedXen Gaming</h1>
+                </div>
+                <div class="header" id="myHeader">
+                    <span id="logo-header">
+                        <img src="res/logo.png" alt="logo">
+                    </span>
+                    <span id="links-header">
+                        <a href="https://forum.redxen.eu">Forum</a>
+                        <a href="https://steamcommunity.com/groups/redxengaming">Steam</a>
+                        <a href="/discord">Discord</a>
+                        <a href="https://yagpdb.redxen.eu">PMBot</a>
+                    </span>
                 </div>
                 <div id="text">
                     <h2>About us</h2>
@@ -72,6 +79,8 @@
                     <div id="news" class="text-field">
                         <div class="row">
                             <h3>June 2018</h3>
+                            Now hosting TF2 servers<br>
+                            Forums are stable and ready to use<br>
                             Created this webpage and added meta tags for SEO's<br>
                             Now hosting server on DigitalOcean with improved bandwidth
                         </div>
