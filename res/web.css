@@ -15,7 +15,10 @@ html {
     display: flex;
     position: absolute;
     overflow: hidden;
-    transition: ease-out 1s;
+    transition: ease-out 0.5s;
+}
+.header:hover {
+    background-color: rgba(0, 0, 0, 0.2);
 }
 .header-title {
     width: 100%;
@@ -34,6 +37,13 @@ html {
     opacity: 1;
     display: flex;
 }
+.sticky > #links-header {
+    display: flex;
+    height: 50px;
+    line-height: 50px;
+    flex: 1 1 0;
+    justify-content: flex-end;
+}
 .sticky {
     position: fixed;
     background-color: rgba(10, 10, 10, 0.7);
@@ -49,7 +59,7 @@ html {
     height: 50px;
     line-height: 50px;
     flex: 1 1 0;
-    justify-content: flex-end;
+    justify-content: space-around;
 }
 #links-header a {
     line-height: 50px;
@@ -234,6 +244,13 @@ h2 { color: #F33;}
     .header {
         position: fixed;
         background-color: rgba(10, 10, 10, 0.4);
+    }
+    .header:hover {
+        background-color: rgba(10, 10, 10, 0.6);
+    }
+    .header-title {
+        opacity: 0;
+        display: none; 
     }
     #banner {
         font-size: 20px;
