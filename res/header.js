@@ -1,4 +1,5 @@
 window.onscroll = function() {checkheader()};
+window.onload = function() {checkheader()};
 
 // Get the header
 var header = document.getElementById("pgHeader");

@@ -33,26 +33,6 @@ html {
     display: none;
     opacity: 0;
 }
-.sticky > #logo-header {
-    opacity: 1;
-    display: flex;
-}
-.sticky > #links-header {
-    display: flex;
-    height: 50px;
-    line-height: 50px;
-    flex: 1 1 0;
-    justify-content: flex-end;
-}
-.sticky > #links-header a:hover {
-    background-color: rgba(255 ,255 ,255, 0.5);
-    color: #a11;
-}
-.sticky {
-    position: fixed;
-    background-color: rgba(10, 10, 10, 0.7);
-    top: 0;
-}
 #logo-header img {
     display: flex;
     height: 40px;
@@ -76,7 +56,6 @@ html {
     font-family: 'Dosis', sans-serif;
 }
 #links-header a:hover {
-    background-color: rgba(255 ,255 ,255, 0);
     color: #a11;
 }
 .content {
@@ -117,12 +96,12 @@ html {
 #text {
     display: flex;
     flex-wrap: wrap;
-    width: 100%;
-    max-width: 1700px;
+    width: 95%;
     min-height: 100px;
     background-color: rgba(70, 70, 70, 0.4);
     color: #fff;
     align-self: center;
+    transition: ease-in-out 0.5s;
 }
 
 #text h2 {
@@ -133,8 +112,24 @@ html {
     background-color: rgba(10, 10, 10, 0.4);
     transition: ease-in-out 0.5s;
 }
-  
+/*Scrolled beyond header*/
 
+.sticky > #logo-header {
+    opacity: 1;
+    display: flex;
+}
+.sticky > #links-header {
+    display: flex;
+    height: 50px;
+    line-height: 50px;
+    flex: 1 1 0;
+    justify-content: flex-end;
+}
+.sticky {
+    position: fixed;
+    background-color: rgba(10, 10, 10, 0.7);
+    top: 0;
+}
 /*Category of descriptions*/
 .category {
     padding: 70px 0 0 0;
@@ -244,7 +239,7 @@ h2 { color: #F33;}
 
 /*Adaptive content using media queries*/
 
-@media screen and (max-width: 730px) {
+@media screen and (max-width: 720px) {
     .header {
         position: fixed;
         background-color: rgba(10, 10, 10, 0.4);
@@ -276,6 +271,9 @@ h2 { color: #F33;}
     }
     .left, .right {
         width: 100%;
+    }
+    .left {
+        min-width: 200px;
     }
     .right {
         padding: 10px 25px 10px 25px;
@@ -315,6 +313,11 @@ h2 { color: #F33;}
     }
     #footer-r {
         padding: 0 0 10px 0;
+    }
+}
+@media screen and (max-width: 1280px) {
+    #text {
+        width: 100%;
     }
 }
 
