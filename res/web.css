@@ -5,9 +5,13 @@ html {
     font-family: 'Oswald', sans-serif;
     background: rgb(10, 10, 10);
     min-height: 300px;
+
+    /*Global Variables*/
+    --desktop-height: 5vh;
+    --mobile-height: 3vh;
+    --header-transparency: rgba(0, 0, 0, 0.7);
 }
 .header {
-    height: 50px;
     width: 100%;
     left: 0;
     background-color: rgba(0, 0, 0, 0);
@@ -18,16 +22,21 @@ html {
     transition: ease-out 0.5s;
 }
 .header:hover {
-    background-color: rgba(0, 0, 0, 0.5);
+    background-color: var(--header-transparency);
 }
 .header-title {
     width: 100%;
-    line-height: 50px;
-    font-size: 25px;
+    line-height: 5vh;
+    font-size: auto;
     color: #fff;
     display: flex;
-    height: 50px;
+    height: 5vh;
     flex-wrap: nowrap;
+    font-size: 3vh;
+}
+.header, #links-header, #links-header a, #logo-header img {
+    height: var(--desktop-height);
+    line-height: var(--desktop-height);
 }
 #logo-header {
     display: none;
@@ -35,24 +44,19 @@ html {
 }
 #logo-header img {
     display: flex;
-    height: 40px;
-    padding: 5px;
 }
 #links-header {
     display: flex;
-    height: 50px;
-    line-height: 50px;
     flex: 1 1 0;
     justify-content: space-around;
 }
 #links-header a {
-    line-height: 50px;
     color: #eee;
     text-align: center;
-    padding-right: 10px;
-    padding-left: 10px;
+    margin-right: 1vw;
+    margin-left: 1vw;
     text-decoration: none;
-    font-size: 20px;
+    font-size: 2.5vh;
     font-family: 'Dosis', sans-serif;
 }
 #links-header a:hover {
@@ -70,11 +74,11 @@ html {
 }
 #banner {
     /*Sizing*/
-    height: 400px;
+    height: 100vh;
     width: 100%;
     color: #fff;
     overflow: hidden;
-    font-size: 40px;
+    font-size: 4vw;
     transition: ease-in-out 0.7s;
     
     /*Flexbox content*/
@@ -88,8 +92,11 @@ html {
     background-size: cover;
     background-repeat: no-repeat;
 }
+#banner h1 {
+    filter: drop-shadow(-5px 6px 3px rgba(0,0,0,.7));
+}
 #banner img {
-    width: 220px;
+    width: 20vw;
     filter: drop-shadow(-5px 6px 3px rgba(0,0,0,.7));
     transition: ease-in-out 0.7s;
 }
@@ -107,10 +114,12 @@ html {
 #text h2 {
     text-align: center;
     width: 100%;
-    font-size: 60px;
-    line-height: 100px;
+    margin: 3vw 0;
+    font-size: 5vw;
+    line-height: 8vw;
     background-color: rgba(10, 10, 10, 0.4);
     transition: ease-in-out 0.5s;
+    color: #F33;
 }
 /*Scrolled beyond header*/
 
@@ -132,7 +141,7 @@ html {
 }
 /*Category of descriptions*/
 .category {
-    padding: 70px 0 0 0;
+    margin: 1.5vw 0;
     display: flex;
     flex-wrap: nowrap;
     width: 100%;
@@ -154,9 +163,6 @@ html {
     padding: 5% 5% 5% 5%;
     transition: ease-in-out 0.2s;
 }
-h2 { color: #F33;}
-
-#news {margin-bottom: 20px;}
 
 .text-field {
     width: 100%;
@@ -164,21 +170,21 @@ h2 { color: #F33;}
     display: flex;
     padding: 20px;
     background-color: rgba(10, 10, 10, 0.4);
-    max-width: 1200px;
-    margin: 1 auto;
+    margin: 0 auto;
     flex-direction: row;
     flex: 1;
-    font-size: 20px;
+    font-size: 1.2vw;
     flex-wrap: wrap;
     align-items: flex-start;
     text-align: center;
     font-family: 'Dosis', sans-serif;
+    transition: ease-in-out 0.5s;
 }
 .row {
-    width: 50%;
+    width: 45%;
 }
 .text-field h3 { 
-    font-size: 25px;
+    font-size: 1.2vw;
     margin: 0;
 }
 
@@ -193,96 +199,116 @@ h2 { color: #F33;}
     transition: ease-in-out 0.2s;
 }
 
+.swap .left {
+    order: 1;
+}
 /*Right side settings*/
 .right {
     background-color: rgba(10, 10, 10, 0.4);
     width: 70%;
     display: flex;
     flex-direction: column;
-    padding: 50px 50px 50px 30px;
+    padding: 2%;
     justify-content: center;
+    text-align: right;
     transition: ease-in-out 0.2s;
 }
 .right h3 {
-    font-size: 40px;
+    font-size: 3vw;
     margin: 0;
 }
 .right p {
+    font-size: 1.5vw;
     font-style: italic;
     font-family: 'Open Sans Condensed', sans-serif;
+}
+.swap .right {
+    order: 0;
+    text-align: left;
 }
 
 /*Webpage footer*/
 #footer {
     color: #fff;
     display: flex;
-    max-width: 1700px;
-    width: 80%;
-    font-size: 20px;
-    height: 200px;
+    width: 95%;
+    height: auto;
+    font-size: 1.5vw;
     text-align: center;
     align-items: center;
     overflow: hidden;
     margin: 1 auto;
+    align-content: space-around;
+    padding: 2%;
 }
 #footer a {
     color: #f22;
     text-decoration: none;
-    padding: 0 10px 0 10px;
-    font-size: 30px;
+    padding: 0 0.5vw;
+    font-size: 1.5vw;
 }
 #footer-r, #footer-r a {
-    font-size: 20px;
+    font-size: 1.5vw;
     padding: 0;
     font-style: italic;
 }
 
 /*Adaptive content using media queries*/
-
 @media screen and (max-width: 720px) {
     .header {
         position: fixed;
         background-color: rgba(10, 10, 10, 0.4);
     }
     .header:hover {
-        background-color: rgba(10, 10, 10, 0.6);
+        background-color: var(--header-transparency);
     }
     .header-title {
         opacity: 0;
         display: none; 
     }
+    .header, #links-header, #links-header a, #logo-header img {
+        height: var(--mobile-height);
+        line-height: var(--mobile-height);
+    }
     #banner {
-        font-size: 20px;
+        font-size: 4vw;
         height: 300px;
     }
-    #text h2 {
-        font-size: 30px;
-        line-height: 50px;
+    #links-header a {
+        font-size: 1vh;
     }
     #banner img {
-        width: 110px;
+        width: 20vw;
     }
     .category {
         flex-wrap: wrap;
-        padding: 30px 0 0 0;
+        margin: 2vw 0;
     }
     .category img {
         width: 30%;
+        margin: 0 auto;
     }
     .left, .right {
         width: 100%;
     }
+    .swap .left {
+        order: 0;
+    }
     .left {
         min-width: 200px;
     }
+    .swap .right {
+        order: 1;
+    }
     .right {
         padding: 10px 25px 10px 25px;
+        text-align: center;
     }
     .right h3 {
-        font-size: 30px;
+        font-size: 6vw;
     }
     .right p {
-        font-size: 15px;
+        font-size: 3vw;
         margin: 0;
     }
     .row { 
@@ -290,25 +316,25 @@ h2 { color: #F33;}
         margin: 10px 0;
     }
     .text-field {
-        font-size: 15px;
+        font-size: 3vw;
         padding: 10px;
         justify-content: space-between;
     }
     .text-field h3 {
-        font-size: 20px;
+        font-size: 4vw;
     }
     #footer {
         width: 90%;
-        font-size: 15px;
+        font-size: 4vw;
         height: auto;
         flex-flow: wrap;
     }
     #footer a {
-        font-size: 25px;
+        font-size: 4vw;
         padding: 0 7px 0 7px;
     }
     #footer-r, #footer-r a {
-        font-size: 15px;
+        font-size: 2vw;
         padding: 0;
     }
     #footer-r {
