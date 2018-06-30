@@ -7,9 +7,9 @@ html {
     min-height: 300px;
 
     /*Global Variables*/
-    --desktop-height: 5vh;
-    --mobile-height: 3vh;
-    --header-transparency: rgba(0, 0, 0, 0.7);
+    --desktop-height: calc(20px + 2vw);
+    --mobile-height: calc(10px + 2vw);
+    --header-transparency: rgba( 0, 0, 0, 0.7);
 }
 .header {
     width: 100%;
@@ -19,45 +19,55 @@ html {
     display: flex;
     position: absolute;
     overflow: hidden;
-    transition: ease-out 0.5s;
+    transition: ease-out 0.2s;
 }
 .header:hover {
     background-color: var(--header-transparency);
+    height: calc(var(--desktop-height) * 1.5);
+}
+.header:hover > .header-title {
+    font-size: calc(var(--desktop-height) / 1.75);
+    height: calc(var(--desktop-height) * 1.5);
 }
 .header-title {
     width: 100%;
-    line-height: 5vh;
-    font-size: auto;
     color: #fff;
     display: flex;
-    height: 5vh;
     flex-wrap: nowrap;
-    font-size: 3vh;
+    font-size: calc(var(--desktop-height) / 2);
+    margin: auto 0;
 }
-.header, #links-header, #links-header a, #logo-header img {
+.header, #links-header, #logo-header, #logo-header img{
     height: var(--desktop-height);
-    line-height: var(--desktop-height);
+    font-size: calc(var(--desktop-height) / 2);
 }
 #logo-header {
     display: none;
     opacity: 0;
+    margin: auto 0;
+}
+#logo-header a {
+    text-decoration: none;
+    color: #fff;
 }
 #logo-header img {
     display: flex;
+    margin-left: 5px;
 }
 #links-header {
     display: flex;
-    flex: 1 1 0;
+    flex: 1;
+    margin: auto 0;
     justify-content: space-around;
+    transition: ease-out 0.4s;
 }
 #links-header a {
     color: #eee;
     text-align: center;
-    margin-right: 1vw;
-    margin-left: 1vw;
+    margin: auto 1vw;
     text-decoration: none;
-    font-size: 2.5vh;
     font-family: 'Dosis', sans-serif;
+    transition: ease-out 0.2s;
 }
 #links-header a:hover {
     color: #a11;
@@ -79,7 +89,7 @@ html {
     color: #fff;
     overflow: hidden;
     font-size: 4vw;
-    transition: ease-in-out 0.7s;
+    transition: ease-out 0.4s;
     
     /*Flexbox content*/
     justify-content: center;
@@ -98,7 +108,7 @@ html {
 #banner img {
     width: 20vw;
     filter: drop-shadow(-5px 6px 3px rgba(0,0,0,.7));
-    transition: ease-in-out 0.7s;
+    transition: ease-out 0.4s;
 }
 #text {
     display: flex;
@@ -108,7 +118,7 @@ html {
     background-color: rgba(70, 70, 70, 0.4);
     color: #fff;
     align-self: center;
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.3s;
 }
 
 #text h2 {
@@ -118,7 +128,7 @@ html {
     font-size: 5vw;
     line-height: 8vw;
     background-color: rgba(10, 10, 10, 0.4);
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.3s;
     color: #F33;
 }
 /*Scrolled beyond header*/
@@ -129,8 +139,6 @@ html {
 }
 .sticky > #links-header {
     display: flex;
-    height: 50px;
-    line-height: 50px;
     flex: 1 1 0;
     justify-content: flex-end;
 }
@@ -146,7 +154,7 @@ html {
     flex-wrap: nowrap;
     width: 100%;
     overflow: hidden;
-    transition: ease-in 200ms;
+    transition: ease-in 0.2s;
     filter: saturate(0%);
     color: #fff;
     box-shadow: 0 4px 8px -2px #000;
@@ -178,7 +186,7 @@ html {
     align-items: flex-start;
     text-align: center;
     font-family: 'Dosis', sans-serif;
-    transition: ease-in-out 0.5s;
+    transition: ease-in-out 0.2s;
 }
 .row {
     width: 45%;
@@ -233,7 +241,7 @@ html {
     display: flex;
     width: 95%;
     height: auto;
-    font-size: vw;
+    font-size: 1vw;
     text-align: center;
     align-items: center;
     overflow: hidden;
@@ -256,11 +264,18 @@ html {
 /*Adaptive content using media queries*/
 @media screen and (max-width: 720px) {
     .header {
-        position: fixed;
+        position: relative;
+        margin-top: 5px;
+        margin-bottom: 5px;
         background-color: rgba(10, 10, 10, 0.4);
     }
     .header:hover {
         background-color: var(--header-transparency);
+        height: var(--mobile-height);
+    }
+    .header:hover > #links-header a {
+        line-height: var(--mobile-height);
+        font-size: 3vw;
     }
     .header-title {
         opacity: 0;
@@ -275,7 +290,7 @@ html {
         height: 300px;
     }
     #links-header a {
-        font-size: 1vh;
+        font-size: 3vw;
     }
     #banner img {
         width: 20vw;
@@ -299,6 +314,7 @@ html {
     }
     .swap .right {
         order: 1;
+        text-align: center;
     }
     .right {
         padding: 10px 25px 10px 25px;

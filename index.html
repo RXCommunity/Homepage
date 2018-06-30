@@ -7,27 +7,13 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <meta name="description" content="The homepage of the RedXen Community">
-        <script
-            src="https://code.jquery.com/jquery-3.3.1.min.js"
-            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-            crossorigin="anonymous">
-        </script>
+        <script src="res/jquery-3.3.1.min.js"></script>
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
         <link rel="shortcut icon" href="/favicon.ico">
-        <!-- On DOM load -->
-        <script>
-            $(document).ready(function() {
-                $.getScript("res/header.js");
-                $.getScript("https://www.googletagmanager.com/gtag/js?id=UA-120536610-1");
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'UA-120536610-1');
-            });
-        </script>
+        <script src="res/main.js"></script>
     </head>
     <body>
         <div class="interface">
@@ -39,7 +25,7 @@
                 <div class="header" id="pgHeader">
                     <span id="logo-header">
                         <div><a href="https://redxen.eu"><img src="res/logo.png" alt="logo"></a></div>
-                        <div class="header-title">RedXen Gaming</div>
+                        <div class="header-title"><a href="https://redxen.eu">RedXen Gaming</a></div>
                     </span>
                     <span id="links-header">
                         <a href="https://forum.redxen.eu">Forum</a>
