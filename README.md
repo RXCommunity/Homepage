@@ -1,7 +1,7 @@
 # RedXen Homepage
 
 ## What is this?
-The portal for the community where everything is linked. It is supposed to be as lightweigh and well-functioning as possible.
+The portal for the community where everything is linked. It is supposed to be as lightweight and well-functioning as possible.
 
 ## How does this work?
 It is based around flexboxes mostly to ensure efficiency and good support.
