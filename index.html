@@ -1,108 +1,69 @@
-<html lang="en">
+<html>
     <head>
-        <!--Styles and meta-->
-        <title>RedXen Community</title>
-        <link rel="stylesheet" href="css/web.css">
-        <meta name="author" content="caskd">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <meta name="description" content="The homepage of the RedXen Community">
-        <script src="js/jquery-3.3.1.min.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Abel" rel="stylesheet"> 
+        <link href="https://fonts.googleapis.com/css?family=Glegoo" rel="stylesheet"> 
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-        <link rel="shortcut icon" href="/favicon.ico">
-        <script src="js/main.js"></script>
+        <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">  
+        <link href="res/stylesheet-min.css" rel="stylesheet" id="style">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+        <script src="res/window.js"></script>
+        <title>RedXen Gaming</title>
     </head>
     <body>
-        <div class="interface">
-            <div class="content">
-               <div class="banner">
-                    <img src="res/logo.png" alt="logo">
-                    <h1>RedXen Gaming</h1>
-                </div>
-                <div class="header" id="pgHeader">
-                    <span class="logo-header">
-                        <div><a href="https://redxen.eu"><img src="res/logo.png" alt="logo"></a></div>
-                        <div class="header-title"><a href="https://redxen.eu">RedXen Gaming</a></div>
-                    </span>
-                    <span class="links-header">
-                        <a href="https://forum.redxen.eu">Forum</a>
-                        <a href="https://steamcommunity.com/groups/redxengaming">Steam</a>
-                        <a href="/discord">Discord</a>
-                        <a href="https://sb.redxen.eu">SourceBans</a>
-                        <a href="https://yagpdb.redxen.eu">PMBot</a>
-                    </span>
-                </div>
-                <div class="text">
-                    <h2>About us</h2>
-                    <div id="forum" class="category">
-                        <div class="left">
-                            <img alt="discourse" src="res/discourse.png">
-                        </div>
-                        <div class="right">
-                            <h3>RedXen Forum</h3>
-                            <p>Our forum is a easy-to-browse forum that is fast and reliable, it is powered by Discourse and it is one of the best community forums!</p>
-                        </div>
-                    </div>
-                    <div id="discord" class="swap category">
-                        <div class="left">
-                            <img alt="discord" src="res/discord.png">
-                        </div>
-                        <div class="right">
-                            <h3>Discord Server</h3>
-                            <p>Due to the reliability that Discord offers, most of the people join us on our server to communicate about topics they have in common, support is also given pretty quick there.</p>    
-                        </div>
-                    </div>
-                    <div id="yagpdb" class="category">
-                        <div class="left">
-                            <img alt="yagpdb" src="res/yagpdb.png">
-                        </div>
-                        <div class="right">
-                            <h3>PMBot</h3>
-                            <p>We also host a slightly customized version of YAGPDB called PMBot that can moderate your servers, you can add him to your server!</p>
-                        </div>
-                    </div>
-                    <div id="sb" class="swap category">
-                        <div class="left">
-                            <img alt="sourcebans" src="res/sb.png">
-                        </div>
-                        <div class="right">
-                            <h3>SourceBans</h3>
-                            <p>Got banned? Don't know the reason why, or want to make a complaint? You should be visiting our SourceBans page</p>
-                        </div>
-                    </div>
-                    <h2>News</h2>
-                    <div id="news" class="text-field">
-                        <div class="row">
-                            <h3>June 2018</h3>
-                            Added SourceBans for easier ban management<br>
-                            Now hosting TF2 &amp; CSS servers<br>
-                            Forums are stable and ready to use<br>
-                            Created this webpage and added meta tags for SEO's<br>
-                            Now hosting server on DigitalOcean with improved bandwidth
-                        </div>
-                        <div class="row">
-                            <h3>May 2018</h3>
-                            Added reaction roles to the discord server<br>
-                            Adapted the homepage to almost all viewports<br>
-                            Updated homepage to a better one<br>
-                            Discord revamp with new channels, categories and roles
-                        </div>
-                    </div>
-                </div>
-                <div class="footer">
-                    <div class="row">
-                        Made by caskd!<br>
-                        <a href="https://steamcommunity.com/id/caskd"><i class="fab fa-steam"></i></a>
-                        <a href="https://github.com/casKd-dev"><i class="fab fa-github"></i></a>
-                        <a href="https://soundcloud.com/caskd"><i class="fab fa-soundcloud"></i></a>
-                    </div>
-                    <div class="footer-r row">
-                        This website was made with tons of love, trial and time. If you appreciate what i have done or want to give me feedback or such, <a href="mailto:caskd@gmx.de">contact</a> me here.
-                    </div>
-                </div>
+        <div id="box">
+                <span id="links-top">
+                        <a href="https://steamcommunity.com/groups/redxengaming"><i class="fab fa-steam"></i></a>
+                        <a href="https://discord.gg/CTFMzde"><i class="fab fa-discord"></i></a>
+                        <a href="https://forum.redxen.eu"><i class="fab fa-discourse"></i></a>
+			<a href="https://yagpdb.redxen.eu"><i class="fas fa-robot"></i></a>
+                </span>
+            <span id="title">
+                <span class="titletext">RedXen Gaming</span>
+            </span>
+        </div>
+        <div id="content">
+            <p class="subtitle">About us</p>
+            <p class="text">
+                We are a small community of gamers that play the same games and enjoy the same things!<br>
+            </p>
+            <p class="subtitle">Updates</p>
+            <p class="text">
+		3 June - Now hosting server on DigitalOcean with improved bandwidth<br>
+                17 May - Added reaction roles to the discord server<br>
+                10 May - Adapted the homepage to almost all viewports<br>
+                6 May - Got a new homepage! The one you are on now<br>
+                1 May - Discord revamp with new channels, categories and roles
+            </p>
+            <p class="subtitle">Servers</p>
+            <p class="text">
+                Currently planning on hosting servers for some games but our bandwidth doesn't allow it for now.<br>
+                In the near future we will get better bandwidth.<br>
+                The approx. number of players that wouldn't impact performance would be ~ 5 players.<br>
+                That amount is too low for a server.
+            </p>
+            <p class="subtitle">Current Staff</p>
+            <p class="text">
+                Owner: casKd <br>
+                Administrator: Davids_Trains<br>
+                Super-Moderator: McDonlad<br>
+                Moderators: ChuppaChupps &amp; Korato
+            </p>
+            <p class="subtitle">Current Setup</p>
+            <p class="text">
+                Our current server setup consists of:<br>
+                2GB RAM<br>
+		2 vCPU's<br>
+		Up to 90 Mbps bandwidth<br>
+		Dockerized Discourse<br>
+		Dockerized YAGPDB<br>
+            </p>
+            <div id="footer">
+                <span class="links">
+                    <a href="https://steamcommunity.com/id/caskd"><i class="fab fa-steam"></i></a>
+                    <a href="https://discord.gg/CTFMzde"><i class="fab fa-discord"></i></a>
+                    <a href="https://forum.redxen.eu/u/caskd"><i class="fab fa-discourse"></i></a>
+                    <a href="mailto:caskd@gmx.de"><i class="fas fa-envelope"></i></a>
+                </span>
             </div>
         </div>
     </body>
