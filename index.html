@@ -1,45 +1,42 @@
+<!DOCTYPE html>
 <html lang="en">
     <head>
         <!--Styles and meta-->
         <title>RedXen Community</title>
-        <link rel="stylesheet" href="css/web.css">
+        <link rel="shortcut icon" href="/favicon.ico">
         <meta name="author" content="caskd">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta charset="UTF-8">
         <meta name="description" content="The homepage of the RedXen Community">
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-        <link rel="shortcut icon" href="/favicon.ico">
-        <script src="js/main.js"></script>
     </head>
     <body>
         <div class="interface">
             <div class="content">
-               <div class="banner">
-                    <img src="res/logo.png" alt="logo">
-                    <h1>RedXen Gaming</h1>
+                <div class="banner">
+                    <div class="banner-title">
+                        <img src="res/logo.svg" alt="banner-logo">
+                        <h1>RedXen Gaming</h1>
+                    </div>
+                    <a class="scrolldown" href="#about">About us</a>
                 </div>
                 <div class="header" id="pgHeader">
-                    <span class="logo-header">
-                        <div><a href="https://redxen.eu"><img src="res/logo.png" alt="logo"></a></div>
+                    <div class="logo-header">
+                        <div><a href="https://redxen.eu"><img src="res/logo.svg" alt="header-logo"></a></div>
                         <div class="header-title"><a href="https://redxen.eu">RedXen Gaming</a></div>
-                    </span>
-                    <span class="links-header">
+                    </div>
+                    <div class="links-header">
                         <a href="https://forum.redxen.eu">Forum</a>
                         <a href="https://steamcommunity.com/groups/redxengaming">Steam</a>
                         <a href="/discord">Discord</a>
                         <a href="https://sb.redxen.eu">SourceBans</a>
                         <a href="https://yagpdb.redxen.eu">PMBot</a>
-                    </span>
+                    </div>
                 </div>
-                <div class="text">
+                <div id="about" class="text">
                     <h2>About us</h2>
                     <div id="forum" class="category">
                         <div class="left">
-                            <img alt="discourse" src="res/discourse.png">
+                            <img alt="discourse" src="res/discourse.svg">
                         </div>
                         <div class="right">
                             <h3>RedXen Forum</h3>
@@ -48,7 +45,7 @@
                     </div>
                     <div id="discord" class="swap category">
                         <div class="left">
-                            <img alt="discord" src="res/discord.png">
+                            <img alt="discord" src="res/discord.svg">
                         </div>
                         <div class="right">
                             <h3>Discord Server</h3>
@@ -57,7 +54,7 @@
                     </div>
                     <div id="yagpdb" class="category">
                         <div class="left">
-                            <img alt="yagpdb" src="res/yagpdb.png">
+                            <img alt="yagpdb" src="res/yagpdb.webp">
                         </div>
                         <div class="right">
                             <h3>PMBot</h3>
@@ -66,7 +63,7 @@
                     </div>
                     <div id="sb" class="swap category">
                         <div class="left">
-                            <img alt="sourcebans" src="res/sb.png">
+                            <img alt="sourcebans" src="res/sb.webp">
                         </div>
                         <div class="right">
                             <h3>SourceBans</h3>
@@ -95,9 +92,9 @@
                 <div class="footer">
                     <div class="row">
                         Made by caskd!<br>
-                        <a href="https://steamcommunity.com/id/caskd"><i class="fab fa-steam"></i></a>
-                        <a href="https://github.com/casKd-dev"><i class="fab fa-github"></i></a>
-                        <a href="https://soundcloud.com/caskd"><i class="fab fa-soundcloud"></i></a>
+                        <a aria-label="Steam" href="https://steamcommunity.com/id/caskd"><i class="fab fa-steam"></i></a>
+                        <a aria-label="GitHub" href="https://github.com/casKd-dev"><i class="fab fa-github"></i></a>
+                        <a aria-label="SoundCloud" href="https://soundcloud.com/caskd"><i class="fab fa-soundcloud"></i></a>
                     </div>
                     <div class="footer-r row">
                         This website was made with tons of love, trial and time. If you appreciate what i have done or want to give me feedback or such, <a href="mailto:caskd@gmx.de">contact</a> me here.
@@ -105,5 +102,10 @@
                 </div>
             </div>
         </div>
+        <link rel="stylesheet" href="css/web.css">
+        <link rel="stylesheet" href="css/fonts.css">
+        <link rel="stylesheet" href="css/fontawesome.css">
+        <script rel="preconnect" src="js/jquery-3.3.1.min.js"></script>
+        <script rel="preconnect" src="js/main.js"></script>
     </body>
 </html>
