@@ -1,0 +1,175 @@
+/*Responsive layout*/
+@media screen and (min-width: 2420px) {
+    .bg-landing img {
+        filter: blur(10px) brightness(0.4);
+    }
+}
+
+@media screen and (min-width: 1620px) {
+    .logo img {
+        height: 200px;
+    }
+    .brand h1 {
+        font-size: 96px;
+        width: 700px;
+    }
+}
+
+@media screen and (max-width: 920px) {
+    .branding {
+        flex-direction: column;
+    }
+    .logo {
+        order: 2;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .logo, .logo img {
+        height: 100px;
+    }
+    .brand {
+        order: 4;
+        text-align: center;
+        min-width: 250px;
+    }
+    .brand h1 {
+        width: 100%;
+        font-size: 48px;
+    }
+    .links {
+        width: 450px;
+        margin: 0 auto;
+    }
+    .about {
+        margin: 20px auto 0 auto;
+    }
+    .tab-content a {
+        padding: 0 5px;
+    }
+    .tabs {
+        padding: 2px 10px 0 10px;
+    }
+    .tabs a {
+        font-size: 12px;
+        border-radius: 5px 5px 0 0;
+        padding: 0 10px;
+    }
+    .tab-content h2 {
+        font-size: 18px;
+    }
+    .tab-content p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (min-width: 920px) {
+    .logo {
+        display: initial !important;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .brand {
+        padding: 0 5px;
+    }
+    .brand h1 {
+        font-size: 32px;
+    }
+    .brand p {
+        font-size: 20px;
+    }
+    .brand a {
+        font-size: 18px;
+    }
+    .links {
+        width: 90%;
+        flex-flow: wrap;
+        max-width: 350px;
+    }
+    .links a { 
+        font-size: 14px;
+    }
+    .about {
+        margin-top: 10px;
+    }
+    .tabs {
+        padding: 2px 10px 0 10px;
+    }
+    .tabs a {
+        font-size: 12px;
+        border-radius: 5px 5px 0 0;
+        padding: 0 10px;
+    }
+    .tab-content h2 {
+        font-size: 18px;
+    }
+    .tab-content p {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 330px) {
+    .brand h1 {
+        font-size: 24px;
+    }
+    .brand p {
+        font-size: 14px;
+    }
+    .links a {
+        font-size: 12px;
+    }
+    .tabs a {
+        padding: 0 4px;
+        margin: 0 2px;
+    }
+    .tab-content h2 {
+        font-size: 14px;
+    }
+    .tab-content p {
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-height: 450px) {
+    .h-on {
+        display: none;
+    }
+    .about {
+        margin-top: 10px;
+    }
+    .logo {
+        display: none;
+    }
+}
+
+/*Resolution Support*/
+
+.unsupported {
+    background-color: #222a;
+    height: 0;
+    justify-content: center;
+    align-content: center;
+    min-height: 0;
+    min-width: 0;
+    z-index: 20;
+    opacity: 0;
+}
+
+.unsupported-text {
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    font-size: 12px;
+    color: #eee;
+}
+
+@media screen and (max-width: 260px), screen and (max-height: 120px) {
+    .unsupported {
+        opacity: 1;
+        height: auto;
+        display: flex;
+    }
+    .page {
+        filter: blur(12px);
+    }
+}

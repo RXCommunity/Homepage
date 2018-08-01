@@ -1,0 +1,48 @@
+/*Animations*/
+
+.float {
+    animation: float 7s infinite;
+    transition: cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s;
+}
+
+.slide-top {
+    animation: slide-in-top 1s;
+}
+
+.slide-left {
+    animation: slide-in-left 1s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(4px);
+    }
+    50% {
+        transform: translateY(-4px);
+    }
+    100% {
+        transform: translateY(4px);
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slide-in-top {
+    0% {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
