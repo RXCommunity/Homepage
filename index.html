@@ -1,109 +1,91 @@
-<html lang="en">
-    <head>
-        <!--Styles and meta-->
-        <title>RedXen Community</title>
-        <link rel="stylesheet" href="css/web.css">
-        <meta name="author" content="caskd">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta charset="UTF-8">
-        <meta name="description" content="The homepage of the RedXen Community">
-        <script src="js/jquery-3.3.1.min.js"></script>
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
-        <link rel="shortcut icon" href="/favicon.ico">
-        <script src="js/main.js"></script>
-    </head>
-    <body>
-        <div class="interface">
-            <div class="content">
-               <div class="banner">
-                    <img src="res/logo.png" alt="logo">
-                    <h1>RedXen Gaming</h1>
-                </div>
-                <div class="header" id="pgHeader">
-                    <span class="logo-header">
-                        <div><a href="https://redxen.eu"><img src="res/logo.png" alt="logo"></a></div>
-                        <div class="header-title"><a href="https://redxen.eu">RedXen Gaming</a></div>
-                    </span>
-                    <span class="links-header">
-                        <a href="https://forum.redxen.eu">Forum</a>
-                        <a href="https://steamcommunity.com/groups/redxengaming">Steam</a>
-                        <a href="/discord">Discord</a>
-                        <a href="https://sb.redxen.eu">SourceBans</a>
-                        <a href="https://yagpdb.redxen.eu">PMBot</a>
-                    </span>
-                </div>
-                <div class="text">
-                    <h2>About us</h2>
-                    <div id="forum" class="category">
-                        <div class="left">
-                            <img alt="discourse" src="res/discourse.png">
-                        </div>
-                        <div class="right">
-                            <h3>RedXen Forum</h3>
-                            <p>Our forum is a easy-to-browse forum that is fast and reliable, it is powered by Discourse and it is one of the best community forums!</p>
-                        </div>
-                    </div>
-                    <div id="discord" class="swap category">
-                        <div class="left">
-                            <img alt="discord" src="res/discord.png">
-                        </div>
-                        <div class="right">
-                            <h3>Discord Server</h3>
-                            <p>Due to the reliability that Discord offers, most of the people join us on our server to communicate about topics they have in common, support is also given pretty quick there.</p>    
-                        </div>
-                    </div>
-                    <div id="yagpdb" class="category">
-                        <div class="left">
-                            <img alt="yagpdb" src="res/yagpdb.png">
-                        </div>
-                        <div class="right">
-                            <h3>PMBot</h3>
-                            <p>We also host a slightly customized version of YAGPDB called PMBot that can moderate your servers, you can add him to your server!</p>
-                        </div>
-                    </div>
-                    <div id="sb" class="swap category">
-                        <div class="left">
-                            <img alt="sourcebans" src="res/sb.png">
-                        </div>
-                        <div class="right">
-                            <h3>SourceBans</h3>
-                            <p>Got banned? Don't know the reason why, or want to make a complaint? You should be visiting our SourceBans page</p>
-                        </div>
-                    </div>
-                    <h2>News</h2>
-                    <div id="news" class="text-field">
-                        <div class="row">
-                            <h3>June 2018</h3>
-                            Added SourceBans for easier ban management<br>
-                            Now hosting TF2 &amp; CSS servers<br>
-                            Forums are stable and ready to use<br>
-                            Created this webpage and added meta tags for SEO's<br>
-                            Now hosting server on DigitalOcean with improved bandwidth
-                        </div>
-                        <div class="row">
-                            <h3>May 2018</h3>
-                            Added reaction roles to the discord server<br>
-                            Adapted the homepage to almost all viewports<br>
-                            Updated homepage to a better one<br>
-                            Discord revamp with new channels, categories and roles
-                        </div>
-                    </div>
-                </div>
-                <div class="footer">
-                    <div class="row">
-                        Made by caskd!<br>
-                        <a href="https://steamcommunity.com/id/caskd"><i class="fab fa-steam"></i></a>
-                        <a href="https://github.com/casKd-dev"><i class="fab fa-github"></i></a>
-                        <a href="https://soundcloud.com/caskd"><i class="fab fa-soundcloud"></i></a>
-                    </div>
-                    <div class="footer-r row">
-                        This website was made with tons of love, trial and time. If you appreciate what i have done or want to give me feedback or such, <a href="mailto:caskd@gmx.de">contact</a> me here.
-                    </div>
-                </div>
-            </div>
+<html>
+
+<head>
+  <link rel="stylesheet" href="css/base.css">
+  <meta name="author" content="caskd">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="description" content="The homepage of the RedXen Community">
+</head>
+
+<body>
+  <div class="background">
+  </div>
+  <div class="page column">
+    <div class="header row">
+      <div class="branding center">
+        <h1>Branding</h1>
+      </div>
+      <div class="flex-spacer"></div>
+      <div class="links">
+        <a href="#">Link1</a>
+        <a href="#">Link2</a>
+        <a href="#">Link3</a>
+        <a href="#">Link4</a>
+      </div>
+    </div>
+    <div class="navigation row">
+      <div class="sidebar column scroll">
+        <a class="side-elem row" href="#">
+          <div class="sidebar-icon">
+            <svg><use xlink:href="#about"></use></svg>
+          </div>
+          <div class="sidebar-text">About</div>
+        </a>
+        <a class="side-elem row" href="#">
+          <div class="sidebar-icon">
+              <svg><use xlink:href="#discord"></use></svg>
+          </div>
+          <div class="sidebar-text">Discord</div>
+        </a>
+        <div class="flex-spacer"></div>
+        <div class="notes">
+          <b>Did you know...</b>
+          <p>That this is a test paragraph?</p>
         </div>
-    </body>
+      </div>
+      <div class="content scroll">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+        natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque
+        eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget,
+        arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium.
+        Integer tincidunt. Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula,
+        porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus.
+        Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet. Etiam ultricies nisi vel augue.
+        Curabitur ullamcorper ultricies nisi. Nam eget dui. Etiam rhoncus. Maecenas tempus, tellus eget condimentum rhoncus,
+        sem quam semper libero, sit amet adipiscing sem neque sed ipsum. Nam quam nunc, blandit vel, luctus pulvinar, hendrerit
+        id, lorem. Maecenas nec odio et ante tincidunt tempus. Donec vitae sapien ut libero venenatis faucibus. Nullam quis
+        ante. Etiam sit amet orci eget eros faucibus tincidunt. Duis leo. Sed fringilla mauris sit amet nibh. Donec sodales
+        sagittis magna. Sed consequat, leo eget bibendum sodales, augue velit cursus nunc, quis gravida magna mi a libero.
+        Fusce vulputate eleifend sapien. Vestibulum purus quam, scelerisque ut, mollis sed, nonummy id, metus. Nullam accumsan
+        lorem in dui. Cras ultricies mi eu turpis hendrerit fringilla. Vestibulum ante ipsum primis in faucibus orci luctus
+        et ultrices posuere cubilia Curae; In ac dui quis mi consectetuer lacinia. Nam pretium turpis et arcu. Duis arcu
+        tortor, suscipit eget, imperdiet nec, imperdiet iaculis, ipsum. Sed aliquam ultrices mauris. Integer ante arcu, accumsan
+        a, consectetuer eget, posuere ut, mauris. Praesent adipiscing. Phasellus ullamcorper ipsum rutrum nunc. Nunc nonummy
+        metus. Vestibulum volutpat pretium libero. Cras id dui. Aenean ut eros et nisl sagittis vestibulum. Nullam nulla
+        eros, ultricies sit amet, nonummy id, imperdiet feugiat, pede. Sed lectus. Donec mollis hendrerit risus. Phasellus
+        nec sem in justo pellentesque facilisis. Etiam imperdiet imperdiet orci. Nunc nec neque. Phasellus leo dolor, tempus
+        non, auctor et, hendrerit quis, nisi. Curabitur ligula sapien, tincidunt non, euismod vitae, posuere imperdiet, leo.
+        Maecenas malesuada. Praesent congue erat at massa. Sed cursus turpis vitae tortor. Donec posuere vulputate arcu.
+        Phasellus accumsan cursus velit. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+        Curae; Sed aliquam, nisi quis porttitor congue, elit erat euismod orci, ac placerat dolor lectus quis orci. Phasellus
+        consectetuer vestibulum elit. Aenean tellus metus, bibendum sed, posuere ac, mattis non, nunc. Vestibulum fringilla
+        pede sit amet augue. In turpis. Pellentesque posuere. Praesent turpis. Aenean posuere, tortor sed cursus feugiat,
+        nunc augue blandit nunc, eu sollicitudin urna dolor sagittis lacus. Donec elit libero, sodales nec, volutpat a, suscipit
+        non, turpis. Nullam sagittis. Suspendisse pulvinar, augue ac venenatis condimentum, sem libero volutpat nibh, nec
+        pellentesque velit pede quis nunc. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia
+        Curae; Fusce id purus. Ut varius tincidunt libero. Phasellus dolor. Maecenas vestibulum mollis diam. Pellentesque
+        ut neque. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. In dui magna,
+        posuere eget, vestibulum et, tempor auctor, justo. In ac felis quis tortor malesuada pretium. Pellentesque auctor
+        neque nec urna. Proin sapien ipsum, porta a, auctor quis, euismod ut, mi. Aenean viverra rhoncus pede. Pellentesque
+        habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Ut non enim eleifend felis pretium
+        feugiat. Vivamus quis mi. Phasellus a est. Phasellus magna. In hac habitasse platea dictumst. Curabitur at lacus
+        ac velit ornare lobortis. Curabitur a felis in nunc fringilla tristique.</div>
+    </div>
+  </div>
+  <script defer src="https://use.fontawesome.com/releases/v5.1.1/js/all.js" integrity="sha384-BtvRZcyfv4r0x/phJt9Y9HhnN5ur1Z+kZbKVgzVBAlQZX4jvAuImlIz+bG7TS00a"
+    crossorigin="anonymous"></script>
+  <i data-fa-symbol="discord" class="fab fa-discord"></i>
+  <i data-fa-symbol="about" class="fas fa-sitemap"></i>
+</body>
+
 </html>
