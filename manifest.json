@@ -1,0 +1,15 @@
+{
+    "name": "RedXen Community",
+    "short_name": "RX Community",
+    "start_url": ".",
+    "display": "standalone",
+    "orientation": "portrait-primary",
+    "theme_color": "red",
+    "background_color": "#e22",
+    "description": "The Community that empowers gamers!",
+    "icons": [{
+        "src": "res/logo.svg",
+        "sizes": "48x48",
+        "type": "image/svg+xml"
+  }]
+}
