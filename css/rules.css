@@ -21,9 +21,6 @@ a:hover {
 }
 
 .links {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-pack: justify;
     -ms-flex-pack: justify;
     justify-content: space-between;
@@ -53,9 +50,6 @@ a:hover {
     background-color: #222;
     border-radius: 10px 10px 0 0;
     padding: 5px 10px 0 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
 }
 
 .tabs a {
