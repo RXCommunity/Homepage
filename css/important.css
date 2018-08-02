@@ -82,6 +82,7 @@ a:link {
     left: -5vw !important;
     min-width: 110vw;
     min-height: 110vh;
+    z-index: 1;
 }
 
 .branding {
@@ -89,6 +90,7 @@ a:link {
     filter: drop-shadow(0 10px 3px #0009);
     margin: auto 0;
     height: 100%;
+    z-index: 2;
 }
 
 .brand {
