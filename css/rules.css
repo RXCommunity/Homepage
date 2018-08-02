@@ -21,13 +21,19 @@ a:hover {
 }
 
 .links {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
     width: 450px;
     font-size: 24px;
 }
 
 .spacer {
+    -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    -o-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
 }
 
@@ -47,6 +53,8 @@ a:hover {
     background-color: #222;
     border-radius: 10px 10px 0 0;
     padding: 5px 10px 0 10px;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
 }
 
@@ -56,6 +64,8 @@ a:hover {
     padding: 0 20px;
     border-radius: 20px 2px 0 0;
     margin: 0 4px;
+    -webkit-transition: ease-out 0.3s;
+    -o-transition: ease-out 0.3s;
     transition: ease-out 0.3s;
 }
 
@@ -76,6 +86,7 @@ a:hover {
 .chosen {
     background-color: #eee !important;
     color: #222 !important;
+    -webkit-box-shadow: 0 0 10px 1px #fff;
     box-shadow: 0 0 10px 1px #fff;
 }
 

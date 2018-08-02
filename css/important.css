@@ -33,7 +33,35 @@ a:visited,
 a:link {
     text-decoration: none;
     color: #eee;
+    -webkit-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+    -o-transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1) 0.5s;
+}
+
+.flex {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.column {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.row {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.justify-center {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
 }
 
 .hide {
@@ -41,16 +69,14 @@ a:link {
     opacity: 0 !important;
 }
 
-.page {
-    display: flex;
-    flex-direction: column;
-}
-
 .spacer {
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
     flex: 1;
 }
 
 .bg-landing img {
+    -webkit-filter: blur(5px) brightness(0.4);
     filter: blur(5px) brightness(0.4);
     top: -5vw !important;
     left: -5vw !important;
@@ -59,8 +85,7 @@ a:link {
 }
 
 .branding {
-    display: flex;
-    flex-direction: row;
+    -webkit-filter: drop-shadow(0 10px 3px #0009);
     filter: drop-shadow(0 10px 3px #0009);
     margin: auto 0;
     height: 100%;
@@ -68,9 +93,6 @@ a:link {
 
 .brand {
     color: #eee;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
     padding: 0 50px;
 }
 
