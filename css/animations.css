@@ -8,6 +8,13 @@
     transition: cubic-bezier(0.455, 0.03, 0.515, 0.955) 0.2s;
 }
 
+.float:hover {
+    -webkit-animation-play-state: paused;
+    -moz-animation-play-state: paused;
+    -o-animation-play-state: paused;
+     animation-play-state: paused;
+}
+
 .slide-top {
     -webkit-animation: slide-in-top 1s;
     animation: slide-in-top 1s;
