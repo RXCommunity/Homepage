@@ -8,8 +8,8 @@
     "background_color": "#e22",
     "description": "The Community that empowers gamers!",
     "icons": [{
-        "src": "res/logo.svg",
-        "sizes": "48x48",
-        "type": "image/svg+xml"
+        "src": "res/logowhite.png",
+        "sizes": "222x222",
+        "type": "image/png"
   }]
 }
