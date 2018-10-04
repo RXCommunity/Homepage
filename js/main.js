@@ -1,8 +1,8 @@
 $(document).ready(function () {
     $("head").append(
-        '<link rel="preload stylesheet" href="css/rules.css">' +
-        '<link rel="preload stylesheet" href="css/responsive.css">' +
-        '<link rel="preload stylesheet" href="css/animations.css">'
+        '<link rel="stylesheet" href="css/rules.css">' +
+        '<link rel="stylesheet" href="css/responsive.css">' +
+        '<link rel="stylesheet" href="css/animations.css">'
     );
     $('#abt-btn').click(function () {
         $('#abt').toggleClass('hide');
