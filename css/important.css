@@ -3,7 +3,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: "Oswald", sans-serif;
+    font-family: 'Life Savers', cursive;
 }
 
 .unsupported,
@@ -96,6 +96,10 @@ a:link {
 .brand {
     color: #eee;
     padding: 0 50px;
+}
+
+.brand h1 {
+	font-family: 'Creepster', cursive;
 }
 
 .logo {

@@ -1,7 +1,7 @@
 /*Page Rules*/
 
 a:hover {
-    color: #e22;
+    color: #2e2;
 }
 
 body {
@@ -60,7 +60,7 @@ body {
 
 .tabs a {
     background-color: #333;
-    color: #eee;
+    color: #1a1;
     padding: 0 20px;
     border-radius: 20px 2px 0 0;
     margin: 0 4px;
@@ -70,7 +70,7 @@ body {
 }
 
 .tabs a:hover {
-    color: #ddd;
+    color: #2f2;
     background-color: #444;
 }
 
@@ -79,7 +79,7 @@ body {
 }
 
 .close {
-    background-color: #e22 !important;
+    background-color: #111 !important;
     border-radius: 10px 10px 0 0 !important;
 }
 
@@ -99,10 +99,10 @@ body {
 }
 
 .tab-content a {
-    color: #e22;
+    color: #1a1;
     padding-right: 10px;
 }
 
 .tab-content a:hover {
-    color: #a11;
+    color: #1f1;
 }
