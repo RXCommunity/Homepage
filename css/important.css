@@ -91,6 +91,7 @@ a:link {
 	min-width: 110vw;
 	min-height: 110vh;
 	z-index: 1;
+	background-image: url("/res/bg.jpg");
 }
 
 .branding {
