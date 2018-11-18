@@ -19,7 +19,6 @@ body {
 .brand h1 {
 	font-size: 72px;
 	line-height: 1.2em;
-	width: 550px;
 }
 
 .brand p {
@@ -48,8 +47,6 @@ body {
 	margin: 40px 0 0 0;
 	min-width: 260px;
 	max-width: 640px;
-	max-height: 400px;
-	height: 50%;
 }
 
 .tabs {
