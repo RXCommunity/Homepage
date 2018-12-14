@@ -16,57 +16,59 @@
 </head>
 
 <body style="background-color: #711">
-	<div id="bg" class="bg-landing">
-		<img alt="background" data-depth="0.2" src="res/bg.jpg">
-	</div>
 	<div id="page" class="page flex column">
-		<div class="branding flex row float">
+		<div class="branding flex row">
 			<div class="brand flex column justify-center">
-				<h1 class="slide-top flex column h-hide">RedXen Community</h1>
-				<div class="slide-left flex column">
+				<h1 class="flex column h-hide">RedXen Community</h1>
+				<div class="flex column">
 					<p class="h-hide">The community that empowers gamers</p>
 					<div class="h-hide links flex">
-						<a id="abt-btn" href="#">About</a>
 						<a href="https://redxen.eu/discord">Discord</a>
 						<a href="https://forum.redxen.eu/">Forums</a>
 						<a href="https://yagpdb.redxen.eu/">PMBot</a>
 						<a href="https://status.redxen.eu/">Status</a>
 					</div>
-					<div id="abt" class="slide-top hide about">
+					<div id="abt" class="about">
 						<div class="tabs flex">
-							<a href="#" class="tab chosen" data-tab="tab-1">Staff</a>
-							<a href="#" class="tab" data-tab="tab-2">Discord</a>
-							<a href="#" class="tab" data-tab="tab-3">Contact</a>
-							<div class="spacer"></div>
-							<a href="#" class="close" id="close">X</a>
+							<a href="#" class="tab chosen" data-tab="tab-1">About us</a>
 						</div>
-						<div id="content" class="abt"></div>
+						<div id="content" class="abt">
+							<div class="tab-content" id="tab-1">
+								<h2>Staff:</h2>
+								<p>Our staff is made out of multiple friendly members that help keep the community and conversations clean. If
+									you need any help you can just call any of them.</p>
+							</div>
+							<div class="tab-content" id="tab-2">
+								<h2>Discord Server:</h2>
+								<p>Due to Discord being easy to use and reliable, we use it as a center for conversations. Join in and have a
+									chat!</p>
+							</div>
+							<div class="tab-content" id="tab-3">
+								<h2>Contact Us:</h2>
+								<p>You can contact the Owner/Server manager directly here:</p>
+								<a href="mailto:caskd@gmx.de">Mail</a>
+								<a href="https://steamcommunity.com/id/caskd">Steam</a>
+								<a href="https://t.me/casKd_dev">Telegram</a>
+							</div>
+
+						</div>
 					</div>
 				</div>
 			</div>
 			<div class="spacer"></div>
-			<div class="logo slide-top">
+			<div class="logo">
 				<img alt="logo" src="res/logo.svg">
 			</div>
 		</div>
 	</div>
-	<div class="unsupported">
-		<div class="unsupported-text">
-			<p>Your resolution is known to cause problems!</p>
-			<p>Please resize your window to a supported resolution.</p>
-		</div>
-	</div>
-	<noscript>
-		<link rel="stylesheet" href="css/rules.css"></noscript>
+	<link rel="stylesheet" href="css/rules.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js" defer></script>
 	<script src="js/main.js" defer></script>
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<link rel="manifest" href="/manifest.json">
-	<noscript>
-		<link rel="stylesheet" href="css/responsive.css"></noscript>
-	<noscript>
-		<link rel="stylesheet" href="css/animations.css"></noscript>
+	<link rel="stylesheet" href="css/responsive.css">
+	<link rel="stylesheet" href="css/animations.css">
 </body>
 
 </html>

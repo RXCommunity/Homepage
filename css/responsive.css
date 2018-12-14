@@ -1,12 +1,5 @@
 /*Responsive layout*/
 
-@media screen and (min-width: 2420px) {
-	.bg-landing img {
-		-webkit-filter: blur(10px) brightness(0.4);
-		filter: blur(10px) brightness(0.4);
-	}
-}
-
 @media screen and (min-width: 1620px) {
 	.logo img {
 		height: 200px;
@@ -187,45 +180,5 @@
 
 	.about {
 		margin-top: 10px;
-	}
-}
-
-/*Resolution Support*/
-
-.unsupported {
-	background-color: #222a;
-	height: 0;
-	-webkit-box-pack: center;
-	-ms-flex-pack: center;
-	justify-content: center;
-	-ms-flex-line-pack: center;
-	align-content: center;
-	min-height: 0;
-	min-width: 0;
-	z-index: 20;
-	opacity: 0;
-}
-
-.unsupported-text {
-	margin: auto;
-	padding: 10px;
-	text-align: center;
-	font-size: 16px;
-	color: #eee;
-}
-
-@media screen and (max-width: 260px),
-screen and (max-height: 120px) {
-	.unsupported {
-		opacity: 1;
-		height: auto;
-		display: -webkit-box;
-		display: -ms-flexbox;
-		display: flex;
-	}
-
-	.page {
-		-webkit-filter: blur(12px);
-		filter: blur(12px);
 	}
 }

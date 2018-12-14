@@ -6,7 +6,7 @@ a:hover {
 
 body {
 	background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-		url(../res/bg.webp) no-repeat center;
+		url(../res/bg.png) no-repeat center;
 	background-size: cover;
 }
 
