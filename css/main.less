@@ -1,0 +1,308 @@
+@slide-duration: 0.5s;
+@slide-width: 80%;
+
+@textdef: #eee;
+@vibrant: #e22;
+@dark: #c11;
+@contentbg: #111;
+@inkdark: #010101;
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+::selection {
+    background: @dark;
+}
+
+img.logo {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 10px;
+
+    &:hover {
+        opacity: 0.5;
+    }
+}
+
+body {
+    margin: 0;
+    background: url("/res/red-space.png") no-repeat;
+    background-size: cover;
+    backdrop-filter: blur(20px);
+    color: @textdef;
+    font-family: 'Oswald', sans-serif;
+}
+
+div.slide.container {
+
+    &::after {
+        content: " ";
+        position: absolute;
+        display: block;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        background: inherit;
+        transform-origin: bottom left;
+    }
+
+    height: 100%;
+    width: @slide-width;
+    box-sizing: border-box;
+    position: fixed;
+    display: block;
+    background-color: @contentbg;
+}
+
+.main {
+    .links {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        min-height: 2em;
+        min-width: 3em;
+
+        ul {
+            opacity: 0;
+            position: absolute;
+        }
+
+        span {
+            opacity: 1;
+            transform: rotate(-90deg);
+        }
+
+        ul,
+        span {
+            transition: cubic-bezier(0.215, 0.610, 0.355, 1) 0.4s;
+        }
+
+        &:hover {
+            ul {
+                opacity: 1;
+                transform: translateX(0px);
+            }
+
+            span {
+                opacity: 0;
+            }
+        }
+    }
+
+    .content {
+        .text {
+            padding: 0 10px;
+            scroll-behavior: smooth;
+            text-align: left;
+
+            a {
+                text-decoration: underline #eee;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+
+            .prst {
+                overflow: hidden;
+                width: 100%;
+
+                &::after {
+                    content: "the community that empowers you";
+                    animation: slideThrough 30s cubic-bezier(0,1,0,1) forwards;
+                    display: inline-block;
+                }
+            }
+        }
+
+        .head {
+            .column {
+                margin: auto 10px;
+
+                h1,
+                p {
+                    margin: 0;
+                }
+            }
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100px;
+            min-height: 100px;
+            margin: 20px 0;
+        }
+
+        margin: 0 20px;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        box-sizing: border-box;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    display: flex;
+    margin: auto;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+ul {
+    li {
+        list-style: none;
+    }
+
+    padding-inline-start: 0;
+}
+
+a {
+    transition: cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    color: darken(@textdef, 70%);
+    text-decoration: none;
+    &[href] {
+        color: @textdef;
+        &:hover {
+            color: @vibrant;
+        }
+    }
+}
+
+div.links a {
+    &[href] {
+        &:hover {
+            &::after {
+                transform: translateX(6px);
+                opacity: 1;
+            }
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &::after {
+        content: ">";
+        position: absolute;
+        opacity: 0;
+        transform: translateX(0px);
+        transition: transform cubic-bezier(0.19, 1, 0.22, 1) 1s;
+    }
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+.shadow {
+    filter: drop-shadow(0px 3px 4px @inkdark);
+}
+
+@media only screen and (min-width: 900px) {
+    div.slide.container {
+        &::after {
+            width: 100%;
+            transform: skew(-10deg, 0deg);
+        }
+
+        width: @slide-width;
+    }
+
+    .links {
+        ul {
+            transform: translateX(-40px);
+        }
+
+        &:hover {
+            span {
+                transform: translateX(-40px) rotate(-90deg);
+            }
+        }
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    img.logo {
+        width: 30px;
+        height: 30px;
+        top: 0;
+    }
+
+    div.slide.container {
+        &::after {
+            opacity: 0;
+        }
+
+        background-color: fade(@contentbg, 50%);
+        width: 100%;
+    }
+
+    .content {
+        .text {
+            h2 {
+                margin: 2px 0;
+            }
+        }
+    }
+
+    .main {
+        .content {
+            order: 1;
+            margin: 0;
+        }
+
+        .links {
+            order: 2;
+            text-align: center;
+            margin: 6px 0;
+
+            ul {
+                opacity: 1;
+                position: relative;
+
+                li {
+                    display: inline;
+                    margin: 0 6px;
+
+                    a {
+                        &::after {
+                            display: none;
+                        }
+                    }
+                }
+            }
+
+            span {
+                display: none;
+            }
+        }
+
+        flex-direction: column;
+    }
+}
+
+@keyframes slideThrough {
+    0%,11%,21%,31%,41%,51% {transform: translateX(-10px); opacity: 0;}
+    2%,7%,12%,17%,22%,27%,32%,37%,42%,47%,52%,100% {transform: translateY(0); opacity: 1;}
+    9%,19%,29%,39%,49% {transform: translateX(10px); opacity: 0;}
+    0% {content: "where you game";}
+    10% {content: "where you are free";}
+    20% {content: "where you have fun";}
+    30% {content: "where the competition starts";}
+    40% {content: "the free community";}
+    50% {content: "the open community";}
+    60%,100% {content: "the community that empowers you";}
+}

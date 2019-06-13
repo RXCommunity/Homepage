@@ -12,61 +12,53 @@
 	<link rel="icon" sizes="222x222" href="res/logowhite.png">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<meta charset="UTF-8">
-	<link rel="stylesheet" href="css/important.css">
+	<link href="css/main.css" rel="stylesheet">
 </head>
 
-<body style="background-color: #711">
-	<div id="bg" class="bg-landing">
-		<img alt="background" data-depth="0.2" src="res/bg.jpg">
-	</div>
-	<div id="page" class="page flex column">
-		<div class="branding flex row float">
-			<div class="brand flex column justify-center">
-				<h1 class="slide-top flex column h-hide">RedXen Community</h1>
-				<div class="slide-left flex column">
-					<p class="h-hide">The community that empowers gamers</p>
-					<div class="h-hide links flex">
-						<a id="abt-btn" href="#">About</a>
-						<a href="https://redxen.eu/discord">Discord</a>
-						<a href="https://forum.redxen.eu/">Forums</a>
-						<a href="https://yagpdb.redxen.eu/">PMBot</a>
-						<a href="https://status.redxen.eu/">Status</a>
-					</div>
-					<div id="abt" class="slide-top hide about">
-						<div class="tabs flex">
-							<a href="#" class="tab chosen" data-tab="tab-1">Staff</a>
-							<a href="#" class="tab" data-tab="tab-2">Discord</a>
-							<a href="#" class="tab" data-tab="tab-3">Contact</a>
-							<div class="spacer"></div>
-							<a href="#" class="close" id="close">X</a>
-						</div>
-						<div id="content" class="abt"></div>
+<body style="background-color:#111">
+	<div class="slide container shadow">
+		<div class="main">
+			<div class="links">
+				<span>LINKS</span>
+				<ul>
+					<li><a title="Soon available...">Forum</a></li>
+					<li><a href="https://redxen.eu/discord">Discord</a></li>
+					<li><a href="https://cloud.redxen.eu">Cloud</a></li>
+					<li><a href="https://yagpdb.redxen.eu"">PMBot</a></li>
+					<li><a href="https://stats.redxen.eu">Servers</a></li>
+					<li><a title="Not available yet...">Status</a></li>
+					<li><a href="https://steamcommunity.com/groups/redxengaming">Steam</a></li>
+					<li><a href="https://github.com/RXCommunity">GitHub</a></li>
+					<li><a href="https://fonts.google.com">GFonts</a></li>
+					<li><a title="Not available yet...">Contact</a></li>
+					<li><a title="Not available yet....">Legal</a></li>
+				</ul>
+			</div>
+			<div class="content">
+				<div class="head">
+					<div class="column">
+						<h1>RedXen Community</h1>
+						<p>The community that empowers gamers</p>
 					</div>
 				</div>
-			</div>
-			<div class="spacer"></div>
-			<div class="logo slide-top">
-				<img alt="logo" src="res/logo.svg">
+				<div class="text">
+					<h2 class="prst">RedXen is&nbsp;</h2>
+					<p>Making sure to respect many of the newest standards, being transparent, <a href="https://prism-break.org">private</a> and having no censorship is what shapes us as a community.</p>
+					<p>We offer a multitude of services ranging from on-premise cloud storage with full control to gameserver hosting, we have everything you would wish for.</p>
+					<h2>Fast</h2>
+					<p>With the help of <a href="https://cloudflare.com">CloudFlare</a>'s <a href="https://www.cloudflare.com/learning/cdn/what-is-caching/">caching technologies</a> and their <a href="https://www.cloudflare.com/learning/cdn/what-is-a-cdn/">content distribution network</a>, most of the pages are loaded in a span of a few seconds, <i title="Depends on your own internet speed">no matter where</i> you are.</p>
+					<h2>Reliable</h2>
+					<p>Our staff always makes sure to be as precautious as possible, making sure that your data is safe and all your services, we offer highly available hosted services in <a href="https://docs.docker.com/engine/swarm#feature-highlights">Enterprise-level containers</a> for a small price.</p>
+					<p>Would it be either a small seedbox or a huge web application, we make sure that it runs un-interrupted and performs well.</p>
+					<h2>Private</h2>
+					<p>Your data is not sold to any third-parties, ever. The only tracked things are your IP address and countries from which you access, with no relation to your private identity. How could you believe us? The only way is knowing about how we operate our services which i myself can gladly tell you <a href="mailto:caskd@gmx.de">here</a>.</p>
+				</div>
 			</div>
 		</div>
 	</div>
-	<div class="unsupported">
-		<div class="unsupported-text">
-			<p>Your resolution is known to cause problems!</p>
-			<p>Please resize your window to a supported resolution.</p>
-		</div>
-	</div>
-	<noscript>
-		<link rel="stylesheet" href="css/rules.css"></noscript>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/parallax/3.1.0/parallax.min.js" defer></script>
-	<script src="js/main.js" defer></script>
+	<img class="logo shadow" src="res/logo.svg">
 	<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
 	<link rel="manifest" href="/manifest.json">
-	<noscript>
-		<link rel="stylesheet" href="css/responsive.css"></noscript>
-	<noscript>
-		<link rel="stylesheet" href="css/animations.css"></noscript>
 </body>
 
 </html>
